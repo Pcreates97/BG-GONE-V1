@@ -11,7 +11,8 @@ export function Footer() {
           </span>
           <span className="font-display text-lg font-bold">{site.name}</span>
           <span className="ml-2 text-xs text-muted-foreground">
-            © {new Date().getFullYear()} · {site.license} License
+            © {new Date().getFullYear()} · {site.license} License · The brilliant mind behind this
+            is Piyush the Ai Developer!
           </span>
         </div>
         <a

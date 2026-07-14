@@ -5,8 +5,8 @@ export const site = {
   description:
     "Drop an image, remove the background, and download a transparent PNG. Free, open source, no sign-up.",
   github: {
-    repo: "https://github.com/your-org/poof",
-    issues: "https://github.com/your-org/poof/issues",
+    repo: "https://github.com/Pcreates97/BG-GONE-V1",
+    issues: "https://github.com/Pcreates97/BG-GONE-V1/issues",
   },
   license: "MIT",
 };
