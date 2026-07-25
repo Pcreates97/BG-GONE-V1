@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface Props {
   beforeUrl: string;
@@ -8,6 +8,19 @@ interface Props {
 export function BeforeAfterComparison({ beforeUrl, afterUrl }: Props) {
   const [pos, setPos] = useState(50);
   const ref = useRef<HTMLDivElement>(null);
+  const [containerWidth, setContainerWidth] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    setContainerWidth(ref.current.clientWidth);
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        setContainerWidth(entry.contentRect.width);
+      }
+    });
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
 
   const move = useCallback((clientX: number) => {
     const rect = ref.current?.getBoundingClientRect();
@@ -36,7 +49,7 @@ export function BeforeAfterComparison({ beforeUrl, afterUrl }: Props) {
           src={beforeUrl}
           alt="before"
           className="block h-full w-auto max-w-none object-contain"
-          style={{ width: ref.current?.clientWidth ?? "100%" }}
+          style={{ width: containerWidth ? `${containerWidth}px` : "100%" }}
         />
         <span className="absolute left-3 top-3 rounded-full border border-foreground bg-background px-3 py-1 text-xs font-bold uppercase">
           Before

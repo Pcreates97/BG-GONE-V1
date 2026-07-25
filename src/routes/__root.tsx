@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Poof — Free Open-Source Background Remover" },
+      { title: "BG GONE! — Free Open-Source Background Remover" },
       {
         name: "description",
         content:
           "Drop an image, remove the background, and download a transparent PNG. Free, open source, no sign-up required.",
       },
-      { property: "og:site_name", content: "Poof" },
-      { property: "og:title", content: "Poof — Free Open-Source Background Remover" },
+      { property: "og:site_name", content: "BG GONE!" },
+      { property: "og:title", content: "BG GONE! — Free Open-Source Background Remover" },
       {
         property: "og:description",
         content: "Drop it. Zap the background. Grab your PNG. Free and open source.",
@@ -119,7 +119,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+      <head suppressHydrationWarning>
         <HeadContent />
       </head>
       <body suppressHydrationWarning>

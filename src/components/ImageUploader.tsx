@@ -40,7 +40,7 @@ export function ImageUploader({ onFile }: Props) {
       }}
       animate={{
         scale: dragOver ? 1.02 : 1,
-        backgroundColor: dragOver ? "#F0E9FF" : "transparent",
+        backgroundColor: dragOver ? "#F0E9FF" : "rgba(240, 233, 255, 0)",
       }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className={`group relative flex min-h-[420px] cursor-pointer flex-col items-center justify-center rounded-2xl border-4 border-dashed p-10 outline-none transition-colors ${
