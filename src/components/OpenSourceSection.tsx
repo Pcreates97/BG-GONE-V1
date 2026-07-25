@@ -24,13 +24,13 @@ const blocks = [
 
 export function OpenSourceSection() {
   return (
-    <section id="open" className="mx-auto max-w-6xl px-4 py-24">
-      <div className="grid gap-12 md:grid-cols-2 md:items-end">
+    <section id="open" className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
+      <div className="grid gap-8 md:grid-cols-2 md:items-end">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display text-5xl font-bold leading-[0.95] tracking-tight md:text-6xl"
+          className="font-display text-3xl sm:text-5xl md:text-6xl font-bold leading-[0.95] tracking-tight"
         >
           YOUR IMAGE.
           <br />

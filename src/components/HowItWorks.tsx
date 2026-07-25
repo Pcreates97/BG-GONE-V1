@@ -27,12 +27,12 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how" className="mx-auto max-w-6xl px-4 py-24">
+    <section id="how" className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center font-display text-5xl font-bold tracking-tight md:text-6xl"
+        className="text-center font-display text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight"
       >
         Seriously. It's{" "}
         <span className="underline decoration-primary decoration-[6px] underline-offset-4">

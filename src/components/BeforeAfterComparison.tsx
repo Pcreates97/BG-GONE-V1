@@ -34,6 +34,7 @@ export function BeforeAfterComparison({ beforeUrl, afterUrl }: Props) {
       ref={ref}
       className="relative w-full max-w-xl select-none overflow-hidden rounded-2xl border-2 border-foreground shadow-toy"
       onMouseMove={(e) => e.buttons === 1 && move(e.clientX)}
+      onTouchStart={(e) => move(e.touches[0].clientX)}
       onTouchMove={(e) => move(e.touches[0].clientX)}
     >
       {/* AFTER (base, checker + processed) */}

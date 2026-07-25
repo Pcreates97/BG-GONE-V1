@@ -7,7 +7,7 @@ export function HeroDecorations() {
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
       <motion.div
-        className="absolute left-[6%] top-[18%] rounded-2xl border-2 border-foreground bg-secondary p-3 shadow-toy-sm"
+        className="absolute left-[2%] top-[10%] hidden sm:block sm:left-[6%] sm:top-[18%] rounded-2xl border-2 border-foreground bg-secondary p-3 shadow-toy-sm"
         style={{ "--r": "-8deg" } as React.CSSProperties}
         animate={{ y: [0, -12, 0], rotate: [-8, -4, -8] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
@@ -16,7 +16,7 @@ export function HeroDecorations() {
       </motion.div>
 
       <motion.div
-        className="absolute right-[8%] top-[22%] rounded-full border-2 border-foreground bg-accent p-3 shadow-toy-sm"
+        className="absolute right-[2%] top-[12%] hidden sm:block sm:right-[8%] sm:top-[22%] rounded-full border-2 border-foreground bg-accent p-3 shadow-toy-sm"
         animate={{ y: [0, 10, 0], rotate: [10, 4, 10] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
       >

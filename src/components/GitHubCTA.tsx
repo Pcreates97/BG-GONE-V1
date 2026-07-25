@@ -4,7 +4,7 @@ import { site } from "../config/site";
 
 export function GitHubCTA() {
   return (
-    <section className="relative mx-4 my-16 overflow-hidden rounded-3xl border-2 border-foreground bg-foreground py-20 text-background shadow-toy-lg md:mx-auto md:max-w-6xl">
+    <section className="relative mx-3 my-12 overflow-hidden rounded-3xl border-2 border-foreground bg-foreground py-12 px-4 sm:py-20 text-background shadow-toy-lg md:mx-auto md:max-w-6xl">
       {/* animated code pattern */}
       <div aria-hidden className="pointer-events-none absolute inset-0 select-none opacity-[0.06]">
         <div className="animate-marquee font-mono text-xs leading-relaxed">
@@ -22,12 +22,12 @@ export function GitHubCTA() {
         </div>
       </div>
 
-      <div className="relative mx-auto max-w-3xl px-6 text-center">
+      <div className="relative mx-auto max-w-3xl px-3 sm:px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display text-5xl font-bold leading-[0.95] tracking-tight md:text-6xl"
+          className="font-display text-3xl sm:text-5xl md:text-6xl font-bold leading-[0.95] tracking-tight"
         >
           LIKE THE TOOL?
           <br />

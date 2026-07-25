@@ -4,8 +4,8 @@ import { site } from "../config/site";
 export function Footer() {
   return (
     <footer className="mx-auto max-w-6xl px-4 pb-10 pt-6">
-      <div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border-2 border-foreground bg-background px-6 py-5 shadow-toy-sm">
-        <div className="flex items-center gap-2">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border-2 border-foreground bg-background px-4 py-4 sm:px-6 sm:py-5 shadow-toy-sm text-center sm:text-left">
+        <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
           <span className="grid h-8 w-8 place-items-center rounded-lg border-2 border-foreground bg-primary text-primary-foreground">
             <Scissors className="h-4 w-4" strokeWidth={2.5} />
           </span>
